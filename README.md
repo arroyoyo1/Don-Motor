@@ -17,9 +17,18 @@ El proyecto utiliza varias clases interrelacionadas para gestionar un sistema de
 
 ## Genera un diagrama de clases UML correcto y y explico su relación con el problema de forma clara 
 
-El diagrama de clases UML proporciona una representación visual clara de la estructura del sistema y las relaciones entre sus componentes, lo que es esencial para entender y comunicar el diseño del sistema. La relación que tiene con el problema se indica mediante el diseño del diagrama es decir, mediante las relaciones indicadas entre clases y la multiplicidad que sirve para dar más información de la arquitectura del proyecto.
+El diagrama de clases UML proporciona una representación visual clara de la estructura del sistema y las relaciones entre sus componentes, lo que es esencial para entender y comunicar el diseño del sistema. La relación que tiene con el problema se indica mediante el diseño del diagrama es decir, mediante las relaciones indicadas entre clases que sirve para dar más información de la arquitectura del proyecto.
 
-/// detallar las relaciones entre clases 
+Herencia:
+Esta relación se encuentra presente entre la clase Vehiculo con Auto, Motocicleta y Camion, ya que estas clases usan atributos de la clase base y aparte es necesaria ya que tenemos que implementar polimorfismo (cada clase hija tiene una propia sobreescritura de los métodos compartidos)
+
+Agregación: 
+Esta relación se muestra entre la clase Alquiler (clase contenedora) con Cliente y Vehiculo, ya que Alquiler tiene objetos de otra clase, pero no controla el ciclo de vida de esos objetos. Los objetos de la clase contenida pueden existir independientemente de la clase contenedora. En este caso Alquiler contiene punteros a Cliente y Vehiculo, pero no los crea.
+
+Composición:
+Esta relación está presente entre la clase Negocio y la clase Alquiler. La primera controla el ciclo de vida de los objetos que contiene. Cuando la clase contenedora es destruida, también lo son los objetos que contiene. Negocio contiene vectores de punteros a Vehiculo, Cliente, y Alquiler. El destructor de Negocio elimina estos objetos, controlando así su ciclo de vida. Cuando se destruye un objeto Negocio, también se destruyen todos los objetos Vehiculo, Cliente, y Alquiler que contiene.
+
+
 
 
 
