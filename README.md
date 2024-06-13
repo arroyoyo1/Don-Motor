@@ -28,9 +28,20 @@ Esta relación se muestra entre la clase Alquiler (clase contenedora) con Client
 Composición:
 Esta relación está presente entre la clase Negocio y la clase Alquiler. La primera controla el ciclo de vida de los objetos que contiene. Cuando la clase contenedora es destruida, también lo son los objetos que contiene. Negocio contiene vectores de punteros a Vehiculo, Cliente, y Alquiler. El destructor de Negocio elimina estos objetos, controlando así su ciclo de vida. Cuando se destruye un objeto Negocio, también se destruyen todos los objetos Vehiculo, Cliente, y Alquiler que contiene.
 
+## Referencias (sintaxis no cubierta en el curso)
 
-
-
+### getline()
+Cuando utilizamos cin en C++, al intentar inputear una respuesta con múltiples valores, solo devuelve el primer caracter, getline() sirve para obtener el resto de los caracteres en la cadena.
+link: https://www.freecodecamp.org/espanol/news/getline-en-c-ejemplo-con-funcion-getline/
+### Operador Ternario
+El operador ternario utiliza tres argumentos: primero, una expresión de comparación; segundo, el resultado que se devuelve si la comparación es verdadera; y tercero, el resultado que se devuelve si la comparación es falsa. Puede ser útil considerar el operador ternario como una versión abreviada de una declaración if-else. Gracias a mi peer por enseñarme esto lol
+link: https://www.freecodecamp.org/espanol/news/operador-ternario-en-c/
+### Destructor de Negocio
+Un destructor es una función miembro que se invoca automáticamente cuando el objeto sale del ámbito o se destruye explícitamente mediante una llamada a delete o delete[] . Un destructor tiene el mismo nombre que la clase y va precedido de una tilde ~ 
+link: https://learn.microsoft.com/es-es/cpp/cpp/destructors-cpp?view=msvc-170 
+### erase()
+La función erase() se utiliza para eliminar elementos de un contenedor a partir de la posición o rango especificado. 
+link: https://www.geeksforgeeks.org/vector-erase-and-clear-in-cpp/
 
 
 
